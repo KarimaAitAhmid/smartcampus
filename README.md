@@ -33,3 +33,4 @@ Après trois échecs consécutifs, le compte est bloqué pendant 15 minutes.
 La déconnexion côté client ne révoque pas automatiquement le jeton JWT côté serveur : l'application est sans état et ne conserve pas de liste de jetons révoqués.
 Un jeton copié avant la déconnexion reste donc valide jusqu'à son expiration (`app.jwt.expiration-ms`, soit 1 heure).
 Une révocation côté serveur (liste noire de jetons, ou jetons courts avec jeton de rafraîchissement) pourra être ajoutée dans un prochain sprint.
+Projet DevOps - Sprint 1
