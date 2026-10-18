@@ -1,4 +1,4 @@
-# SmartCampus - Gestion des salles universitaires
+# SmartCampus - Gestion des salles universitaires de l'ENSA Khouribga
 
 Application web de gestion et de réservation des salles universitaires (ENSA Khouribga).
 
