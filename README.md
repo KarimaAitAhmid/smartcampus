@@ -27,3 +27,9 @@ Après trois échecs consécutifs, le compte est bloqué pendant 15 minutes.
 - Sans jeton valide, l'API répond `401 NON_AUTHENTIFIE`.
 - Avec un jeton valide, l'API répond `204 No Content`.
 - Le client (frontend) doit ensuite supprimer le jeton qu'il a stocké. Les pages protégées demandent alors une nouvelle connexion.
+
+#### Limite connue
+
+La déconnexion côté client ne révoque pas automatiquement le jeton JWT côté serveur : l'application est sans état et ne conserve pas de liste de jetons révoqués.
+Un jeton copié avant la déconnexion reste donc valide jusqu'à son expiration (`app.jwt.expiration-ms`, soit 1 heure).
+Une révocation côté serveur (liste noire de jetons, ou jetons courts avec jeton de rafraîchissement) pourra être ajoutée dans un prochain sprint.
